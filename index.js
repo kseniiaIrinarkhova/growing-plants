@@ -10,6 +10,7 @@
 const PI = 3.1415;
 const minPlantSpace = 0.8;
 
+
 // Define changeable variables 
 let radius = 5;
 let area = PI*(radius**2);
@@ -28,6 +29,22 @@ let startPlantAmount = 20;
 *Within your submission, include the results for 1, 2, and 3 weeks of growth as inputs.
  */
 
+const maxCapacity = area/minPlantSpace; //count max garden capacity
+
+let weekNumber = 2;
+
+let plantAmount = startPlantAmount*(2**weekNumber); //count how many plants will be after viewed week
+//let plantArea = plantAmount*minPlantSpace; //calc the area which current plant's ammount 
+let capacity = plantAmount/maxCapacity*100;
+
+if (capacity > 80) {
+    console.log(`Pruned! currently plants occupy ${capacity} of the garden.`)
+} else if (capacity < 50) {
+    console.log(`Planted! currently plants occupy ${capacity} of the garden.`)
+}
+else{
+    console.log(`Monitored! currently plants occupy ${capacity} of the garden.`)
+}
 /**---------------------Part 3
  * The conservation area in which the garden is located has multiple other gardens. 
 *Using the logic you have already created, determine:
