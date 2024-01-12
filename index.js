@@ -6,6 +6,16 @@
 * The plants double in number every week.
  */
 
+// Define constant variables
+const PI = 3.1415;
+const minPlantSpace = 0.8;
+
+// Define changeable variables 
+let radius = 5;
+let area = PI*(radius**2);
+let startPlantAmount = 20;
+
+
 /**--------------------Part 1
  * Predict the plant growth after a specific number of weeks.
 * Implement control flow to make decisions on whether the plants should be:
