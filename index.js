@@ -78,3 +78,19 @@ console.log(`
 *******next part************
 ****************************
 `);
+
+console.log(`You tried to plant ${startPlantAmount} in ${area.toFixed(2)} square meters.`);
+
+try {
+    plantArea = startPlantAmount * minPlantSpace; //calculate the initial area fot 100 plants
+    if (plantArea > area) 
+    {
+     throw `There area is not enough. You need ${plantArea} square meters instead of ${area.toFixed(2)}!`   
+    }
+    
+} catch (error) {
+    console.log(error);
+}
+
+
+
