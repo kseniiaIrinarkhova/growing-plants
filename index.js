@@ -60,7 +60,12 @@ startPlantAmount = 100;
 weekNumber = 10;
 plantAmount = startPlantAmount * (2 ** weekNumber); //count how many plants will be after viewed week
 let plantArea = plantAmount*minPlantSpace; //calc the area which current plant's ammount 
-console.log(`After ${weekNumber} weeks plants will occupy ${plantArea.toFixed(2)} square meters. It needs ${(plantArea - area).toFixed(2)} square meters more.`);
+if (plantArea > area) {
+    console.log(`After ${weekNumber} weeks plants will occupy ${plantArea.toFixed(2)} square meters. It needs ${(plantArea - area).toFixed(2)} square meters more.`);
+} else {
+    console.log(`After ${weekNumber} weeks plants will occupy ${plantArea.toFixed(2)} square meters. It needs ${(area-plantArea).toFixed(2)} square meters more.`);
+}
+
 radius = Math.sqrt(plantArea/PI);
 console.log(`The radius of the garden would be ${radius.toFixed(2)} meters`);
 
@@ -68,3 +73,8 @@ console.log(`The radius of the garden would be ${radius.toFixed(2)} meters`);
 * The scientists decided not to listen to your recommendations, and have instead started with 100 plants in the original 5-meter-radius garden.
 * Use try and catch to wrap your work in an error-handling block. If the amount of space required to hold the originally provided number of plants exceeds the amount of space available, throw a new error and log an appropriate message.
  */
+console.log(`
+****************************
+*******next part************
+****************************
+`);
